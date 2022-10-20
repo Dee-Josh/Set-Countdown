@@ -1,0 +1,554 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: white;
+    background: #000;
+}
+
+.for-bg{
+    height: 100vh;
+    display: flex;
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/Img/ll.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* position: absolute;
+    width: 100%; */
+
+}
+
+.left-container{
+    background-color: rgba(255, 192, 203, 0.671);
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    /* justify-content: right; */
+    justify-content: flex-end;
+
+
+}
+
+.pee-one{
+    height: 150px;
+    width: 393px;
+    margin-top: 136px;
+    border: 2px solid pink;
+    border-right: none;
+}
+
+.pee-two{
+    height: 150px;
+    width: 393px;
+    margin-top: 136px;
+    border: 2px solid rgb(20, 20, 110);
+    border-left: none;
+}
+
+.right-container{
+    background-color: rgba(7, 7, 54, 0.778);
+    width: 50%;
+}
+
+
+
+.container{
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+
+    text-align: center;
+    height: 100vh;
+
+}
+
+
+.container nav{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.birthday{
+    color: rgb(0, 81, 255);
+}
+
+.countdown-container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0 15px;
+}
+
+.column{
+    font-size: 150px;
+}
+
+.days-container{
+    /* border: 2px solid green; */
+    height: 150px;
+    width: 150px;
+
+    display: flex;
+    gap: 10px;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.days-container .days{
+    font-size: 80px;
+}
+
+.hours-container{
+    /* border: 2px solid green; */
+    height: 150px;
+    width: 150px;
+
+    display: flex;
+    gap: 10px;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.hours-container .hours{
+    font-size: 80px;
+}
+
+.minutes-container{
+    /* border: 2px solid green; */
+    height: 150px;
+    width: 150px;
+
+    display: flex;
+    gap: 10px;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.minutes-container .minutes{
+    font-size: 80px;
+}
+
+.seconds-container{
+    /* border: 2px solid green; */
+    height: 150px;
+    width: 150px;
+
+    display: flex;
+    gap: 10px;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.seconds-container .seconds{
+    font-size: 80px;
+}
+
+
+
+.input-container{
+    width: 100%;
+    max-width: 80%;
+    /* border: 1px solid gold; */
+    position: relative;
+    margin: 10px auto;
+}
+
+.input-container .input-one{
+    padding: 10px;
+    width: 70%;
+    height: 40px;
+    transition: all 0.1s ease;
+    border: none;
+}
+
+/* input:focus{
+    border: none;
+    outline: none;
+} */
+
+/* .input-container button{
+    width: 15%;
+    height: 40px;
+    border: 1px solid pink;
+} */
+
+.input-container .label{
+    position: absolute;
+    top: 10px;
+    left: 19%;
+    pointer-events: none;
+    color: rgba(0, 0, 0, 0.527);
+    font-size: 18px;
+    transition: all 0.5s ease;
+}
+
+.input-one:focus ~ .label,
+input:not(:focus):valid ~ .label{
+    top: 0;
+    font-size: 14px;
+}
+
+.Time{
+    margin-top: 9px;
+    margin-bottom: 10px;
+    height: 35px;
+    width: 100px;
+    background-color: rgba(255, 192, 203, 0.87);
+    border: none;
+    color: white;
+    padding-right: 10px;
+}
+
+
+.Date{
+    margin-top: 9px;
+    margin-bottom: 10px;
+    height: 35px;
+    width: 100px;
+    background-color: rgb(20, 20, 110);
+    border: none;
+    color: white;
+    padding-left: 10px;
+}
+
+.Date:focus,
+.Time:focus{
+    outline: none;
+}
+
+.reminder-list.open{
+    left: 1px;
+}
+
+.save-btn{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+}
+
+
+.lorem-text{
+    max-width: 630px;
+    margin: auto;
+}
+
+
+footer{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer a{
+    color: white;
+    transition: all .5s;
+}
+
+footer a:hover{
+    color: pink;
+    scale: 1.1;
+}
+
+
+@media screen and (max-width: 790px) {
+   
+
+
+    .pee-one,
+    .pee-two{
+        height: 150px;
+        width: calc(50vw - 15px);
+        margin-top: 136px;
+    }
+
+}
+
+
+@media screen and (max-width: 790px) {
+
+    .pee-one,
+    .pee-two{
+        height: 150px;
+        width: calc(50vw - 15px);
+        margin-top: 136px;
+        margin-top: 120px;
+    }
+
+    .days-container .days,
+    .hours-container .hours,
+    .minutes-container .minutes,
+    .seconds-container .seconds{
+        font-size: 65px;
+    }
+
+    .column{
+        font-size: 120px;
+        height: 150px;
+    }
+
+}
+
+
+/* 630px */
+
+
+@media screen and (max-width: 690px){
+
+
+    /* .input-container .input-one{
+        padding: 10px;
+        width: 70%;
+    }
+
+
+    .input-container .label{
+        left: 9%;
+    } */
+}
+@media screen and (max-width: 630px){
+
+
+
+    .pee-one,
+    .pee-two{
+        margin-top: 100px;
+    }
+
+    .countdown-container{
+        gap: 0px;
+    }
+
+    .days-container .days,
+    .hours-container .hours,
+    .minutes-container .minutes,
+    .seconds-container .seconds{
+        font-size: 55px;
+    }
+
+    .days-container p,
+    .hours-container  p,
+    .minutes-container p,
+    .seconds-container  p{
+        font-size: 15px;
+    }
+
+    .column{
+        /* border: 2px solid; */
+        font-size: 90px;
+        height: 130px;
+    }
+
+    
+
+    .lorem-text{
+        max-width: 85%;
+        margin: auto;
+    }
+} 
+
+
+@media screen and (max-width: 510px){
+
+    .pee-one,
+    .pee-two{
+        margin-top: 140px;
+        height: 130px;
+        width: calc(50vw - 10px);
+    }
+
+    
+
+    .countdown-h1{
+        margin-top: 20px;
+        margin-bottom: 55px;
+        font-size: 25px;
+    }
+
+    .days-container .days,
+    .hours-container .hours,
+    .minutes-container .minutes,
+    .seconds-container .seconds{
+        font-size: 45px;
+    }
+
+    .days-container p,
+    .hours-container  p,
+    .minutes-container p,
+    .seconds-container  p{
+        font-size: 14px;
+    }
+
+    footer{
+        margin-top: 4em;
+    }
+}
+
+@media screen and (max-width: 466px){
+    .input-container .label{
+        top: 13px;
+        font-size: 15px;
+    }
+
+    .input-container{
+        margin: 30px auto;
+    }
+
+    footer{
+        margin-top: 2em;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .countdown-h1{
+        margin-top: 20px;
+        margin-bottom: 0px;
+        font-size: 28px;
+    }
+
+    .column{
+        font-size: 84px;
+        height: 130px;
+    }
+
+    .days-container p,
+    .hours-container  p,
+    .minutes-container p,
+    .seconds-container  p{
+        font-size: 12px;
+    }
+
+    /* .input-container .input-one{
+        padding: 10px;
+        width: 80%;
+    }
+
+    .input-container .label{
+        top: 13px;
+        font-size: 13px;
+        left: 5%;
+    } */
+
+    .input-one:focus ~ .label,
+    input:not(:focus):valid ~ .label{
+        top: 0;
+        font-size: 12px;
+    }
+    
+}
+
+/* 340px  */
+
+@media screen and (max-width: 345px){
+
+    .pee-one,
+    .pee-two{
+        margin-top: 98px;
+        height: 100px;
+    }
+
+    .countdown-container{
+        margin-top: 25px;
+    }
+
+    .countdown-h1{
+        margin-top: 10px;
+        margin-bottom: 25px;
+        font-size: 23px;
+    }
+
+    .days-container,
+    .hours-container,
+    .minutes-container,
+    .seconds-container{
+        height: 70px;
+    }
+
+
+    .days-container .days,
+    .hours-container .hours,
+    .minutes-container .minutes,
+    .seconds-container .seconds{
+        font-size: 35px;
+    }
+
+    .days-container p,
+    .hours-container  p,
+    .minutes-container p,
+    .seconds-container  p{
+        font-size: 10px;
+    }
+
+    .input-container{
+        margin: 30px auto;
+        margin-top: 0;
+    }
+
+
+    .column{
+        font-size: 64px;
+        height: 130px;
+    }
+
+    footer{
+        margin-top: 3em;
+    }
+}
+
+@media screen and (max-width: 300px){
+
+    .pee-one,
+    .pee-two{
+        margin-top: 140px;
+        height: 100px;
+    }
+
+    .countdown-h1{
+        margin-top: 20px;
+        margin-bottom: 40px;
+        font-size: 28px;
+    }
+
+    .countdown-h1{
+        font-size: 24px;
+    }
+
+    .days-container .days,
+    .hours-container .hours,
+    .minutes-container .minutes,
+    .seconds-container .seconds{
+        font-size: 30px;
+    }
+
+
+    .input-container .label{
+        top: 13px;
+        font-size: 12px;
+        left: 4%;
+    }
+    
+    .input-one:focus ~ .label,
+    input:not(:focus):valid ~ .label{
+        top: 0;
+        font-size: 11px;
+    }
+    
+}
